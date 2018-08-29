@@ -29,4 +29,5 @@ package com.yao.microservicefileupload.upload;
  * @create: 2018-08-29 15:02
  */
 public class TestGit {
+    System.out.println("hello");
 }
