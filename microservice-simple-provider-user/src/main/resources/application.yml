@@ -1,0 +1,33 @@
+# 公共配置
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      # 方言使用MySQL
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+      url: jdbc:mysql://localcent.yao/spring_cloud_demo
+      username: root
+      password: admin
+      driver-class-name: com.mysql.jdbc.Driver
+  # 指定应用名，即也是注册到eureka上的名称
+  application:
+    name: provider-user
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      # defaultZone: http://peer-auth:8760/eureka, http://peer1:8761/eureka, http://peer2:8762/eureka
+      defaultZone: http://peer1:8761/eureka
+---
+server:
+  port: 8000
+spring:
+  profiles: provider1
+---
+server:
+  port: 8001
+spring:
+  profiles: provider2

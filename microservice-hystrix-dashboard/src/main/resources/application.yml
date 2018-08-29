@@ -1,0 +1,14 @@
+server:
+  port: 8030
+spring:
+  application:
+    name: microservice-hystrix-bashboard
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@peer-auth:8760/eureka
+  instance:
+    prefer-ip-address: true
+turbine:
+  app-config: consumer-movie
+  cluster-name-expression: "'default'"

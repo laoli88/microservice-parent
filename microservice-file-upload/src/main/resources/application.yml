@@ -1,0 +1,15 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: upload
+  servlet:
+    multipart:
+      max-file-size: 2000MB
+      max-request-size: 2500MB
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@peer-auth:8760/eureka
+  instance:
+    prefer-ip-address: true

@@ -1,0 +1,24 @@
+# 公共配置
+spring:
+  application:
+    name: consumer-movie
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer-auth:8760/eureka/,http://peer1:8761/eureka/,http://peer2:8762/eureka/
+  instance:
+    prefer-ip-address: true
+
+# 消费者1号机子
+---
+server:
+  port: 8100
+spring:
+  profiles: c1
+# 消费者2号机子
+
+---
+server:
+  port: 8101
+spring:
+  profiles: c2
