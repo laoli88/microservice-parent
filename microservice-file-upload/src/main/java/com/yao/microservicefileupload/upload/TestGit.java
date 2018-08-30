@@ -29,4 +29,7 @@ package com.yao.microservicefileupload.upload;
  * @create: 2018-08-30 15:37
  */
 public class TestGit {
+    {
+        System.out.println("事情远远没有你想象的那么简单");
+    }
 }
