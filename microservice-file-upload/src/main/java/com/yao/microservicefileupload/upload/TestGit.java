@@ -23,13 +23,13 @@ package com.yao.microservicefileupload.upload;
  * 　　　　　　　　  ┃┫┫ ┃┫┫
  * 　　　　　　　　  ┗┻┛ ┗┻┛+ + + +
  *
- * @program: microservice-parent
- * @description: s
+ * @Program: microservice-parent
+ * @Description: s
  * @author: YaoYY
  * @create: 2018-08-30 15:52
  */
 public class TestGit {
     {
-        System.out.println("你后");
+        System.out.println("");
     }
 }
