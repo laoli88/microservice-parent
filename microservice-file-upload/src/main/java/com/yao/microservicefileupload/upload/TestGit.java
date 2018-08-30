@@ -29,5 +29,7 @@ package com.yao.microservicefileupload.upload;
  * @create: 2018-08-30 15:52
  */
 public class TestGit {
-
+    {
+        System.out.println("你后");
+    }
 }
