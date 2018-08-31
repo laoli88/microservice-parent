@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: provider-user
+  cloud:
+    config:
+      name: provider
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer2:8762/eureka

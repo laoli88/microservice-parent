@@ -15,8 +15,8 @@ server:
   port: 8100
 spring:
   profiles: c1
-# 消费者2号机子
 
+# 消费者2号机子
 ---
 server:
   port: 8101

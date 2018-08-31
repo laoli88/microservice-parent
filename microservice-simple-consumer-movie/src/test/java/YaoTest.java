@@ -1,4 +1,6 @@
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean;
 
 /**
  * 　　　　　　　 ┏┓　 ┏┓+ +
@@ -29,6 +31,9 @@ import org.junit.Test;
  * @create: 2018-08-21 17:30
  */
 public class YaoTest {
+
+    @Autowired
+    EurekaInstanceConfigBean eurekaInstanceConfigBean;
 
     @Test
     public void test2(){

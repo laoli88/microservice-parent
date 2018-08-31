@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    config:
+      # uri: config-server
+      label: master
+      name: consumer
+      discovery:
+        enabled: true
+        service-id: config-server
+  application:
+    name: consumer-movie
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer2:8762/eureka

@@ -1,6 +1,12 @@
 server:
   port: 8080
 spring:
+  rabbitmq:
+    virtual-host: test
+    username: admin
+    password: admin
+    host: localcent.yao
+    port: 5672
   cloud:
     config:
       server:
@@ -8,3 +14,11 @@ spring:
           uri: https://gitee.com/yaoyyy/microservice-config-repo.git
           username: yaoyyy
           password: anxiaoluo1221
+  application:
+    name: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka,http://peer1:8762/eureka
+  instance:
+    prefer-ip-address: false

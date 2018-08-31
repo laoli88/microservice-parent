@@ -59,7 +59,7 @@ public class TestFilter extends ZuulFilter {
     public Object run() {
         RequestContext cxt = RequestContext.getCurrentContext();
         String password = cxt.getRequest().getParameter("password");
-        if (password != "123") {
+        if ("123".equals(password)) {
             cxt.setSendZuulResponse(false);
         }
         System.err.println("run过滤方法执行");

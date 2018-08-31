@@ -4,6 +4,8 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.yao.microservicesimpleconsumermovie.api.UserFeignClient;
 import com.yao.microservicesimpleconsumermovie.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -12,12 +14,42 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
+@RefreshScope
 public class MovieController {
 
     @Autowired
     private RestTemplate restTemplate;
     @Autowired
     private UserFeignClient userFeignClient;
+
+    @Value("${server.port}")
+    private Integer port;
+    @Value("${customize}")
+    private String customize;
+    
+    /** 
+     * @Description: 从git上获取customize的值并打印出去
+     * @Param: [] 
+     * @Return: java.lang.String
+     * @Author: YaoYY 
+     * @Date: 2018/8/31 
+     */ 
+    @GetMapping("getCustomize")
+    public String getCstomize() {
+        return customize;
+    }
+
+    /**
+     * @Description: 看看能不能从码云上拿到配置
+     * @Param: []
+     * @return: java.lang.String
+     * @Author: YaoYY
+     * @Date: 2018/8/30
+     */
+    @GetMapping("getPort")
+    public String getPort() {
+        return port.toString();
+    }
 
     @GetMapping("{id}")
     public User findById(@RequestHeader(value = "yaoyy", required = false) String host, @PathVariable Long id) {
