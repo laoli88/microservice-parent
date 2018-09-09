@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest({"spring.profiles.active=provider"})
 public class MicroserviceSimpleProviderUserApplicationTests {
 
 
