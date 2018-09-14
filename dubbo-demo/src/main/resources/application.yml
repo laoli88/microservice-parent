@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+# dubbo的自定义配置
+dubbo:
+  application:
+    name: nhr
+  registry:
+    address: zookeeper://10.230.44.97:2181?backup=10.230.44.98:2181,10.230.44.99:2181
+  annotation:
+    package: com.yao.dubbodemo
